@@ -1,0 +1,29 @@
+<th:block xmlns:th="http://www.thymeleaf.org">
+  <div class="container">
+    <table class="table table-hover">
+      <thead>
+      <tr>
+        <th scope="col"  style="color: #213559">City</th>
+        <th scope="col" style="color: #213559">Date</th>
+        <th scope="col" style="color: #213559">Maximum Temperature</th>
+        <th scope="col" style="color: #213559">Minimum Temperature</th>
+        <th scope="col" style="color: #213559">Weather</th>
+
+      </tr>
+      </thead>
+      <tbody>
+      <tr th:each="el: ${rainyDaysData}" >
+        <td th:text="${el.city.CityName}" style="color: #213559"></td>
+        <td th:text="${el.date}" style="color: #213559"></td>
+        <td th:text="${el.min_temperature}" class="text-info"></td>
+        <td th:text="${el.max_temperature}" class="text-info"></td>
+        <td th:text="${el.weather}" class="text-warning"></td>
+
+      </tr>
+      </tbody>
+    </table>
+  </div>
+
+
+
+</th:block>
